@@ -186,7 +186,7 @@ namespace Replace_a_Face
                 
                 string profileFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Mount&Blade Warband\\profiles.dat";
 
-                if (File.Exists(profileFile))
+                if (!File.Exists(profileFile))
                 {
                     MessageBox.Show("Profiles.dat has been removed. Reopen warband and try again.");
                     return;
